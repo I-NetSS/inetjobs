@@ -1,0 +1,77 @@
+<div class="card m-2">
+ <h1 class="text-center">{{title}}</h1>
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+	<div class="row">
+			<div class="col-md-2 text-center">
+				<label>Field Name</label>
+			</div>
+			<div class="col-md-2 text-center">
+				<label>Field Type</label>
+			</div>
+			<div class="col-md-2 text-center">
+				<label>Archive</label>
+			</div>
+			<div class="col-md-2 text-center">
+				<label>Select</label>
+			</div>
+	</div>	
+	<div class="row">
+      <div class="form-group col-md-2">
+        <input type="text" class="form-control" formControlName="fieldName"/>
+		<div *ngIf="angForm.controls['fieldName'].invalid && (angForm.controls['fieldName'].dirty || angForm.controls['fieldName'].touched)" class="alert alert-danger">
+			<div *ngIf="angForm.controls['fieldName'].errors.required">
+				Product Name is required.
+			</div>
+      	</div>
+      </div>
+      <div class="form-group col-md-2">
+		<select class="form-control" formControlName="fiedType">
+			<option value="1">text</option>
+			<option value="2">select</option>
+			<option value="3">textarea</option>
+			<option value="4">checkbox</option>
+			<option value="5">date</option>
+			<option value="6">email</option>
+			<option value="7">file</option>
+			<option value="8">radio</option>
+			<option value="9">password</option>
+		</select>
+		<div *ngIf="angForm.controls['fiedType'].invalid && (angForm.controls['fiedType'].dirty || angForm.controls['fiedType'].touched)" class="alert alert-danger">
+			<div *ngIf="angForm.controls['fiedType'].errors.required">
+			Product Description is required.
+			</div>
+		</div>
+      </div>
+	   
+	    <div class="form-group col-md-2">
+			<input type="checkbox" class="form-control" formControlName="achive"/>
+			<div *ngIf="angForm.controls['achive'].invalid && (angForm.controls['achive'].dirty || angForm.controls['achive'].touched)" class="alert alert-danger">
+				<div *ngIf="angForm.controls['achive'].errors.required">
+				Product Price is required.
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group col-md-2">
+			<input type="checkbox" class="form-control" formControlName="select"/>
+			<div *ngIf="angForm.controls['select'].invalid && (angForm.controls['select'].dirty || angForm.controls['select'].touched)" class="alert alert-danger">
+				<div *ngIf="angForm.controls['select'].errors.required">
+				Product Price is required.
+				</div>
+			</div>
+	   </div>
+	   
+	  </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary mr-1" [disabled]="angForm.pristine || angForm.invalid" >
+          Create Product
+		</button>
+		
+		<button type="reset" class="btn btn-primary" ngClick="reset()">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
