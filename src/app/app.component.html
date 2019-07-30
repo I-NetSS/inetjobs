@@ -1,23 +1,40 @@
 <ng2-slim-loading-bar color="blue"></ng2-slim-loading-bar>
-<nav class="navbar navbar-expand-sm bg-light">
+<nav class="navbar navbar-expand-sm bg-light border border-info rounded-top navbar-light m-1">
   <div class="container-fluid">
     <ul class="navbar-nav">
-	  <li class="nav-item">
+		<li class="nav-item ml-4">
+			<a href="https://www.inetsoftwaresolutions.co.uk/">
+			 <img src="../assets/image/inet.jpg" class="nav-link" routerLinkActive="active"/>
+			</a>
+		</li>
+	  <li class="nav-item font-weight-bold ml-4">
         <a routerLink="searchJobs" class="nav-link" routerLinkActive="active">
-          All Jobs Posts
+          ABOUT US
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item font-weight-bold ml-4">
         <a routerLink="product/create" class="nav-link" routerLinkActive="active">
-          Create Product
+          PRODUCTS
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item font-weight-bold ml-4">
         <a routerLink="products" class="nav-link" routerLinkActive="active">
-          Products
+          SERVICES
         </a>
-      </li> 
-    </ul>
+	  </li>
+	  <li class="nav-item font-weight-bold ml-4">
+        <a routerLink="products2" class="nav-link" routerLinkActive="active">
+          CONTACT US
+        </a>
+	  </li>  
+	</ul>
+	<ul class="navbar-nav ml-auto">
+	   <li class="nav-item font-weight-bold">
+        <a routerLink="signinup" class="nav-link" routerLinkActive="active">
+          SIGN-IN/SIGN-UP
+        </a>
+	  </li>
+	</ul>
   </div>
 </nav>
 
