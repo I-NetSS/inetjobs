@@ -1,21 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponentProduct } from '../product/app.component.product';
-import { AppComponentProducts } from '../products/app.component.products';
 import { SearchJobs } from '../searchJobs/app.component.search.jobs';
+import { AppComponentLogin } from '../login/app.component.login';
+import { AppComponentAboutUs } from '../aboutus/app.component.aboutus';
+import { AppComponentContactUs } from '../contactus/app.component.contactus';
+import { AppComponentServices } from '../services/app.component.services';
 
 const routes: Routes = [
   {
-    path: 'searchJobs',
-    component: SearchJobs
+    path: 'aboutus',
+    component: AppComponentAboutUs
   },
   {
     path: 'product/create',
     component: AppComponentProduct
   },
   {
-    path: 'products',
-    component: AppComponentProducts
+    path: 'services',
+    component: AppComponentServices
+  },
+  {
+    path: 'contactus',
+    component: AppComponentContactUs
+  },
+  {
+    path: 'login',
+    component: AppComponentLogin
   }
 ];
 
