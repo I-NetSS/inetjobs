@@ -11,6 +11,7 @@ import { AppComponentLogin } from './login/app.component.login';
 import { AppComponentAboutUs } from './aboutus/app.component.aboutus';
 import { AppComponentContactUs } from './contactus/app.component.contactus';
 import { AppComponentServices } from './services/app.component.services';
+import { SlideshowModule } from '../../public_api';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AppComponentServices } from './services/app.component.services';
     BrowserModule,
 	AppRoutingModule,
 	ReactiveFormsModule,
-	SlimLoadingBarModule
+	SlimLoadingBarModule,
+	SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

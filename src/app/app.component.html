@@ -58,6 +58,50 @@
   </div>
 </nav>
 
+<div class="card m-1">
+  <div style="display:block;"
+       [style.width]="width">
+    <slideshow #slideshow
+               [imageUrls]="imageUrls"
+               [height]="height"
+               [minHeight]="minHeight"
+               [arrowSize]="arrowSize"
+               [showArrows]="showArrows"
+               [disableSwiping]="disableSwiping"
+               [autoPlay]="autoPlay"
+               [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+               [debug]="debug"
+               [backgroundSize]="backgroundSize"
+               [backgroundPosition]="backgroundPosition"
+               [backgroundRepeat]="backgroundRepeat"
+               [showDots]="showDots"
+               [dotColor]="dotColor"
+               [showCaptions]="showCaptions"
+               [captionColor]="captionColor"
+               [captionBackground]="captionBackground"
+               [lazyLoad]="lazyLoad"
+               [hideOnNoSlides]="hideOnNoSlides"
+               [fullscreen]="fullscreen"
+               [enableZoom]="enableZoom"
+               [enablePan]="enablePan">
+    </slideshow>
+  </div>
+ <div  class="card m-1 mx-auto bg-secondary w-100">
+	<form [formGroup]="" novalidate class="form-group float-center">
+			<div class="row mt-4 d-flex justify-content-center">
+				<div class="form-group col-md-2">
+					<input type="text" class="form-control form-control-lg" id="jobtitle" placeholder="Job Title">
+				</div>
+				<div class="form-group col-md-2">
+					<input type="text" class="form-control form-control-lg" id="location" placeholder="Town City Postcode">
+				</div>
+				<div class="form-group mt-1 col-md-2">
+					<button type="submit" class="btn btn-primary">Search</button>
+				</div>
+			</div>
+	</form>
+  </div>
 <div>
   <router-outlet></router-outlet>
+</div>
 </div>
