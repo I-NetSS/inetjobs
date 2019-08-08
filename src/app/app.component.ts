@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     '../assets/slider/inet-slider3.jpg',
     { url: '../assets/slider/inet-slider5.jpg', backgroundSize: 'contain', backgroundPosition: 'center' }
   ];
-  height: string = '400px';
+  height: string = '300px';
   minHeight: string;
   arrowSize: string = '30px';
   showArrows: boolean = true;
